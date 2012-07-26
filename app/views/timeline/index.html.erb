@@ -1,0 +1,7 @@
+<h1>Timeline</h1>
+
+<% @timeline.each do |photo| %>
+<div class="photo">
+  <div class="file"><%= image_tag(photo.file.url(:default))%></div>
+  <div class="description"><%= photo.description %> - <%= l(photo.created_at)%></div>
+<% end %>
